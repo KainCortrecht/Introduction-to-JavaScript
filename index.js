@@ -21,7 +21,7 @@ Do the following:
 */
 const votingAge = 23;
  if (votingAge >= 18){
-   console.log(true);
+   console.log('true');
  }
 /*
 Task 1b - Values
@@ -33,8 +33,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let word = 1;
+let word2 = 2;
+if (word2 === 2){
+  word = 3;
+}
+console.log(word);
 
 
 
@@ -48,8 +52,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+const rope = "1999";
+console.log(Number(rope));
 
 
 /*
@@ -109,10 +113,18 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(weight <=5 && age >= 1){
+    return weight * .05;
+  }else if(weight >=6 && weight <= 10 && age >= 1){
+    return weight * .04;
+ }else if(weight >=11 && weight <= 15 && age >= 1){
+  return weight * .03;
+ }else if(weight >15 && age >= 1){
+  return weight * .02;
+ } 
 }
-
+console.log(hungryDog(4,2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -151,7 +163,7 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
