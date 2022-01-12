@@ -46,11 +46,11 @@ console.log(word);
 Task 1c - Convert Strings to Numbers
 
 Do the following:   
-   1. Declare a string type variable with the value of "1999"
-   2. Convert the string value of "1999" to a integer value of 1999
-   3. Console log the result
+1. Declare a string type variable with the value of "1999"
+2. Convert the string value of "1999" to a integer value of 1999
+3. Console log the result
 
-   HINT: look up the Number method
+HINT: look up the Number method
 */
 const rope = "1999";
 console.log(Number(rope));
@@ -156,10 +156,40 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computer = Math.random()
 function game(user, computer){
-  /*add your code here*/
+  if(computer <= 1/3){
+    computer = 'scissors'
+  }
+  if(computer > 1/3 && computer <= 2/3){
+    computer = 'paper'
+  }
+  if(computer > 2/3 && computer <= 1){
+    computer = 'scissors'
+  }
+  if(computer === 'scissors' && user === 'rock'){
+    return "you win!";
+  } else if(computer === 'scissors' && user === 'paper'){
+    return "you lose!";
+  } else if(computer === 'scissors' && user === 'scissors'){
+    return "it's a tie";
+  }
+  if(computer === 'paper' && user === 'scissors'){
+    return "you win!";
+  } else if(computer === 'paper' && user === 'rock'){
+    return "you lose!";
+  } else if(computer === 'paper' && user === 'paper'){
+    return "it's a tie";
+  }
+  if(computer === 'rock' && user === 'paper'){
+    return "you win!";
+  } else if(computer === 'rock' && user === 'scissors'){
+    return "you lose!";
+  } else if(computer === 'rock' && user === 'rock'){
+    return "it's a tie";
+  }
 }
-
+console.log(game('rock', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -173,10 +203,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  let kilo = kilometers * 0.621371
+  {
+    return kilo
+  } 
 }
-
+console.log(miles(5))
 
 
 //Task 5b - Feet to CM
